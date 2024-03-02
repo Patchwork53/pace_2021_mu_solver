@@ -1,0 +1,237 @@
+OURS
+
+heur/heur001.gr
+Deleted 0 edges
+11 solution.txt
+-------------------
+heur/heur010.gr
+Deleted 0 edges
+1501 solution.txt
+-------------------
+heur/heur020.gr
+Deleted 0 edges
+1350 solution.txt
+-------------------
+heur/heur030.gr
+Deleted 0 edges
+2789 solution.txt
+-------------------
+heur/heur040.gr
+Deleted 0 edges
+3455 solution.txt
+-------------------
+heur/heur041.gr
+3436 solution.txt
+-------------------
+heur/heur042.gr
+Deleted 6 edges
+821 solution.txt
+-------------------
+heur/heur043.gr
+Deleted 4 edges
+9173 solution.txt
+-------------------
+heur/heur050.gr
+Deleted 0 edges
+18428 solution.txt
+-------------------
+heur/heur060.gr
+Deleted 0 edges
+18769 solution.txt
+-------------------
+heur/heur070.gr
+Deleted 5 edges
+5352 solution.txt
+-------------------
+heur/heur080.gr
+Deleted 0 edges
+1392 solution.txt
+-------------------
+heur/heur090.gr
+Deleted 176 edges
+11988 solution.txt
+-------------------
+heur/heur100.gr
+Deleted 5 edges
+17014 solution.txt
+-------------------
+heur/heur110.gr
+Deleted 27 edges
+34264 solution.txt
+-------------------
+heur/heur120.gr
+Deleted 0 edges
+26016 solution.txt
+-------------------
+heur/heur130.gr
+Deleted 0 edges
+1079993 solution.txt
+-------------------
+heur/heur140.gr
+Deleted 0 edges
+121477 solution.txt
+-------------------
+heur/heur150.gr
+Deleted 371 edges
+32671 solution.txt
+-------------------
+heur/heur160.gr
+Deleted 0 edges
+186103 solution.txt
+-------------------
+heur/heur170.gr
+Deleted 19474 edges
+23204 solution.txt
+-------------------
+heur/heur180.gr
+FAIL
+-------------------
+heur/heur180.gr
+Deleted 107090 edges
+365389 solution.txt
+-------------------
+heur/heur190.gr
+FAIL
+-------------------
+heur/heur200.gr
+Deleted 929706 edges
+1696044 solution.txt
+
+
+MUSOLVER
+-------------------
+heur/heur001.gr
+Deleted 0 edges
+11 solution.txt
+-------------------
+heur/heur010.gr
+Deleted 0 edges
+1501 solution.txt
+-------------------
+heur/heur020.gr
+Deleted 0 edges
+1350 solution.txt
+-------------------
+heur/heur030.gr
+Deleted 0 edges
+2789 solution.txt
+-------------------
+heur/heur040.gr
+Deleted 0 edges
+3455 solution.txt
+-------------------
+heur/heur041.gr
+3436 solution.txt
+-------------------
+heur/heur042.gr
+Deleted 6 edges
+821 solution.txt
+-------------------
+heur/heur043.gr
+Deleted 4 edges
+9173 solution.txt
+-------------------
+heur/heur050.gr
+Deleted 0 edges
+18428 solution.txt
+-------------------
+heur/heur060.gr
+Deleted 0 edges
+18769 solution.txt
+-------------------
+heur/heur070.gr
+Deleted 5 edges
+5352 solution.txt
+-------------------
+heur/heur080.gr
+Deleted 0 edges
+1392 solution.txt
+-------------------
+heur/heur090.gr
+Deleted 175 edges
+11988 solution.txt
+-------------------
+heur/heur100.gr
+Deleted 5 edges
+17014 solution.txt
+-------------------
+heur/heur110.gr
+Deleted 27 edges
+34264 solution.txt
+-------------------
+heur/heur120.gr
+Deleted 0 edges
+26014 solution.txt
+-------------------
+heur/heur130.gr
+Deleted 0 edges
+1079985 solution.txt
+-------------------
+heur/heur140.gr
+Deleted 0 edges
+121477 solution.txt
+-------------------
+heur/heur150.gr
+Deleted 371 edges
+32669 solution.txt
+-------------------
+heur/heur160.gr
+Deleted 0 edges
+186103 solution.txt
+-------------------
+heur/heur170.gr
+Deleted 19474 edges
+23202 solution.txt
+-------------------
+heur/heur180.gr
+Deleted 107082 edges
+365376 solution.txt
+-------------------
+heur/heur190.gr
+Deleted 128218 edges
+1676394 solution.txt
+-------------------
+heur/heur200.gr
+Deleted 922471 edges
+1689435 solution.txt
+
+
+
+
+
+
+-------------------
+heur/heur193.gr
+An invalid line or not enough lines in the input. Offending line:
+Deleted 115503 edges
+
+OK
+613829 solution.txt
+-------------------
+heur/heur197.gr
+An invalid line or not enough lines in the input. Offending line:
+Deleted 542269 edges
+
+OK
+944761 solution.txt
+-------------------
+heur/heur198.gr
+An invalid line or not enough lines in the input. Offending line:
+Deleted 1811348 edges
+
+OK
+2651064 solution.txt
+-------------------
+heur/heur199.gr
+An invalid line or not enough lines in the input. Offending line:
+Deleted 709924 edges
+
+OK
+1164995 solution.txt
+-------------------
+heur/heur200.gr
+An invalid line or not enough lines in the input. Offending line:
+Deleted 922471 edges
+
+OK
+1689167 solution.txt

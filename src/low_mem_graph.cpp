@@ -395,6 +395,8 @@ bool LowMemGraph::isolate_small_complete2(int s)
 	bool deleted = false;
 	vector<int> out_degs, outer, candidates;
 
+	set<int> checked;
+	checked.clear();
 	// define set
 	set<int> N_K;
 
@@ -404,6 +406,10 @@ bool LowMemGraph::isolate_small_complete2(int s)
 		if (deg(u) != s - 1)
 			continue;
 
+		if (checked.find(u) != checked.end())
+			continue;
+
+		
 		int a = 0;
 		for (int v : adjs[u])
 			for (int w : adjs[u])
@@ -414,6 +420,22 @@ bool LowMemGraph::isolate_small_complete2(int s)
 		if (a != (s - 1) * (s - 2))
 			continue;
 
+		for (int v : adjs[u])
+			if (deg(v) == s - 1){
+				bool is_clique = true;
+				for(int w: adjs[v]){
+					if (w!=u && !adjacent(w,u)){
+						is_clique = false;
+						break;
+					}
+				}
+
+				if(is_clique){
+					checked.insert(v);
+				}
+			}
+
+		// cout <<"clique found at u: "<<u<<" with size: "<<s<<endl;
 		// clear N_K
 		N_K.clear();
 
@@ -456,11 +478,11 @@ bool LowMemGraph::isolate_small_complete2(int s)
 				for (int x : candidates)
 					if (x != u && !adjacent(x, u) && N_K.find(x) == N_K.end()) // not in N_K and not in clique
 						deleted = true, remove_edge(x, v);
-				for (auto w : N_K)
-				{
-					if (v != w && !adjacent(v, w))
-						deleted = true, add_edge(v, w);
-				}
+				// for (auto w : N_K)
+				// {
+				// 	if (v != w && !adjacent(v, w))
+				// 		deleted = true, add_edge(v, w);
+				// }
 			}
 		}
 		else if (!NK_greater_than_K && K_and_NK_greater_than_editting_distance)
@@ -498,11 +520,11 @@ bool LowMemGraph::isolate_small_complete2(int s)
 					for (int x : candidates)
 						if (x != u && !adjacent(x, u) && N_K.find(x) == N_K.end()) // not in N_K and not in clique
 							deleted = true, remove_edge(x, v);
-					for (auto w : N_K)
-					{
-						if (v != w && !adjacent(v, w))
-							deleted = true, add_edge(v, w);
-					}
+					// for (auto w : N_K)
+					// {
+					// 	if (v != w && !adjacent(v, w))
+					// 		deleted = true, add_edge(v, w);
+					// }
 				}
 			}
 			else{
@@ -512,21 +534,23 @@ bool LowMemGraph::isolate_small_complete2(int s)
 					for (int x : candidates)
 						if (x != u && !adjacent(x, u) && N_K.find(x) == N_K.end() && vertices_that_fulfill.find(x)==vertices_that_fulfill.end()) // not in N_K and not in clique and not in vertices_that_fulfill
 							deleted = true, remove_edge(x, v);
-					for (auto w : N_K)
-					{
-						if (v != w && !adjacent(v, w))
-							deleted = true, add_edge(v, w);
-					}
+					// for (auto w : N_K)
+					// {
+					// 	if (v != w && !adjacent(v, w))
+					// 		deleted = true, add_edge(v, w);
+					// }
 				}
 			}
 		}
 	}
 
+
 	return deleted;
 }
 
 int64_t LowMemGraph::kernelize()
-{
+{	
+
 	int64_t m_removed = _m;
 	int i = 0;
 	bool cont;
@@ -547,18 +571,25 @@ int64_t LowMemGraph::kernelize()
 
 		for (int s = 3; s <= 10; ++s)
 		{
-			// while (isolate_small_complete(s))
-			// 	cont = true;
-			while (isolate_small_complete2(s))
+			while (isolate_small_complete(s))
 				cont = true;
 		}
+		// cout<<"Deleted "<<m_removed-_m<<" edges in iteration "<<i<<endl;
+		for (int s = 3; s <= 10; ++s)
+		{
 
+			while (isolate_small_complete2(s)){
+				// cout<<"DeletedX "<<m_removed-_m<<" edges in iteration "<<i<<endl;
+				cont = true;
+			}
+		}
+		// cout<<"Deleted "<<m_removed-_m<<" edges in iteration "<<i<<endl;
 		++i;
+		
 	} while (cont);
 
-	cout << "Kernelization rounds: " << i << endl;
-
 	m_removed -= _m;
+	cout << "Deleted " << m_removed << " edges" << endl;
 	return m_removed;
 }
 
